@@ -6,6 +6,8 @@ add=a+b
 print ("sum= ",float(add))
 
 #subraction
+a=float(input("enter a"))
+b=float(input("enter b"))
 if a>b:
     sub=a-b
 else:
@@ -13,10 +15,14 @@ else:
 print("differece is ",float(sub))
 
 #multiplication/product
+a=float(input("enter a"))
+b=float(input("enter b"))
 product=a*b
 print("product is ",float(product))
 
 #division
+a=float(input("enter a"))
+b=float(input("enter b"))
 if a>b:
     div=a/b
 else:
@@ -24,6 +30,8 @@ else:
 print("divisior is ",float(div))
 
 #modulus
+a=float(input("enter a"))
+b=float(input("enter b"))
 if a>b:
     mod=a%b
 else:
@@ -31,6 +39,8 @@ else:
 print("reminder is ",float(mod))
 
 #exponent
+a=float(input("enter a"))
+b=float(input("enter b"))
 if a>b:
     exp=a**b
 else:
@@ -38,6 +48,8 @@ else:
 print("exponent is ",float(exp))
 
 #floor division
+a=float(input("enter a"))
+b=float(input("enter b"))
 if a>b:
     fd=a//b
 else:
