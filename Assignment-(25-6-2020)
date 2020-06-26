@@ -1,0 +1,32 @@
+#1.Python program to count number of vowels in given string.
+x=str(input('enter a string'))
+count=0
+for r in x:
+    if r=='a' or r== 'e' or r=='i' or r=='o' or r=='u':
+        count+=1
+print('no of vowels in enterd string are ',int(count))        
+
+#2.Python program to Remove all duplicates from a given string.
+from collections import OrderedDict
+def remove_duplicate(str1):
+  return "".join(OrderedDict.fromkeys(str1))
+   
+print(remove_duplicate("hello"))
+
+#3.Python program to print even length words in a string.
+str2=str(input('enter a string'))
+count=len(str2)
+print(int(count))
+      
+ #4.Python program to Reverse words in a given String in Python.
+str2=str(input('enter a string'))
+print(str2[::-1])   
+
+#  5.Python program to Check if a given string is binary string or not.
+str3=str(input('enter a binary string'))
+for x in str3:
+    if x==0 or x==1:
+        continue
+    else:
+        print("entred string is not binary string")
+        break
