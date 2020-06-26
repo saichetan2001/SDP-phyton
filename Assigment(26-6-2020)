@@ -1,0 +1,75 @@
+#Given an input string, count occurrences of all characters within a string.
+all_freq = {} 
+test_str=input('enter a string')
+  
+for i in test_str: 
+    if i in all_freq: 
+        all_freq[i] += 1
+    else: 
+        all_freq[i] = 1
+  
+# printing result  
+print ("Count of all characters in GeeksforGeeks is :\n "+  str(all_freq)) 
+
+#2.Given a string, return the sum and average of the digits that appear in the string, ignoring all other characters.
+import re 
+def find_sum(str1): 
+    
+    return sum(map(int,re.findall('\d+',str1))) 
+  
+
+str1 = input('enter a string')
+  
+print(find_sum(str1)) 
+
+#3.Given a string input Count all lower case, upper case, digits, and special symbols.
+def Count(str): 
+    upper, lower, number, special = 0, 0, 0, 0
+    for i in range(len(str)): 
+        if str[i].isupper(): 
+            upper += 1
+        elif str[i].islower(): 
+            lower += 1
+        elif str[i].isdigit(): 
+            number += 1
+        else: 
+            special += 1
+    print('Upper case letters:', upper) 
+    print('Lower case letters:', lower) 
+    print('Number:', number) 
+    print('Special characters:', special) 
+  
+# Driver Code 
+str = input('enter A STRING')
+Count(str)
+
+#4.Arrange String characters such that lowercase letters should come first.
+test_str =input('enter a string')
+  
+  
+print("The original string is : " + str(test_str)) 
+  
+ 
+res = test_str[0].lower() + test_str[1:] 
+  
+  
+print("The string after lowercasing initial character : " + str(res)) 
+test_str = "GeeksforGeeks"
+  
+ 
+print("The original string is : " + str(test_str)) 
+  
+
+res = test_str[0].lower() + test_str[1:] 
+  
+
+print("The string after lowercasing initial character : " + str(res)) 
+
+ 
+
+#5.Given 2 strings, s1 and s2, create a new string by appending s2 in the middle of s1.
+str1=input('enter first string')
+str2=input('enter another string')
+x=(len(str1))/2
+str3=str1[:int(x)]+str2+str1[int(x):]
+print(str3)
