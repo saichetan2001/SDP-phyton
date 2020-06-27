@@ -1,0 +1,61 @@
+# 1. Write a program that prints the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number, and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+num=1
+while num<=100 :
+    if num%3==0 and num%5==0 :
+        print("FizzBuzz")
+    elif num%3==0:
+       print( "Fizz") 
+    elif num%5==0:
+      print( "Buzz")
+    else:
+        print(num)
+    num+=1
+    
+#2.Write a Python program to remove  consecutive duplicates from list.
+x = [1,2,4,7,3,7,8,4,4,9]
+
+previous_value = None
+new_lst = []
+
+for elem in x:
+   if elem != previous_value:
+       new_lst.append(elem)
+       previous_value = elem
+
+print(new_lst)
+
+#3. Write a python program to find unique element from a list.
+my_list = [10, 20, 30, 40, 20, 50, 60, 40]
+print("Original List : ",my_list)
+my_set = set(my_list)
+my_new_list = list(my_set)
+print("List of unique numbers : ",my_new_list)
+
+#4.Write a function that checks whether a number is in a given range (inclusive of high and low) 
+def test_range(n):
+    if n in range(3,9):
+        print( " %s is in the range"%str(n))
+    else :
+        print("The number is outside the given range.")
+test_range(5)
+#5.Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
+
+def Count(str): 
+    upper, lower, number, special = 0, 0, 0, 0
+    for i in range(len(str)): 
+        if str[i].isupper(): 
+            upper += 1
+        elif str[i].islower(): 
+            lower += 1
+        elif str[i].isdigit(): 
+            number += 1
+        else: 
+            special += 1
+    print('Upper case letters:', upper) 
+    print('Lower case letters:', lower) 
+    print('Number:', number) 
+    print('Special characters:', special) 
+  
+# Driver Code 
+str = input('enter A STRING')
+Count(str)
