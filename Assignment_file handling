@@ -1,0 +1,50 @@
+#1. Write a Python program to read an entire text file
+def file_read(fname):
+        txt = open(fname)
+        print(txt.read())
+
+file_read('fname.txt')
+
+#2.Write a Python program to append text to a file and display the text.
+def file_read(fname):
+        from itertools import islice
+        with open(fname, "w") as myfile:
+                myfile.write("Python Exercises\n")
+                myfile.write("Java Exercises")
+        txt = open(fname)
+        print(txt.read())
+file_read('fname')
+
+#3.Write a Python program to read a file line by line and store it into a list.
+def file_read(fname):
+        with open(fname) as f:
+                #Content_list is the list that contains the read lines.     
+                content_list = f.readlines()
+                print(content_list)
+
+file_read('fname.txt')
+
+#4.Write a python program to find the longest words.
+def longest_word(filename):
+    with open(filename, 'r') as infile:
+              words = infile.read().split()
+    max_len = len(max(words, key=len))
+    return [word for word in words if len(word) == max_len]
+
+print(longest_word('regex_sum_24962.txt'))
+
+#5.Write a Python program to count the number of lines in a text file
+file = open("regex_sum_24962.txt","r") 
+Counter = 0
+  
+# Reading from file 
+Content = file.read() 
+CoList = Content.split("\n") 
+  
+for i in CoList: 
+    if i: 
+        Counter += 1
+          
+print("This is the number of lines in the file") 
+print(Counter) 
+
